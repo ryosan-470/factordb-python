@@ -1,5 +1,9 @@
 # FactorDB CLI (and Python library)
-[![Travis](https://img.shields.io/travis/ryo-san470/factordb-pycli.svg?style=flat-square)]()
+[![Travis](https://img.shields.io/travis/ryo-san470/factordb-pycli.svg?style=flat-square)](https://travis.org/ryo-san470/factordb-pycli)
+[![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)]()
+[![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)]()
+[![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)]()
+[![PyPI](https://img.shields.io/pypi/v/factordb-pycli.svg?style=flat-square)]()
 
 The [FactorDB](https://factordb.com) is the database to store known factorizations for any number.
 This tool can use on your command line. 
@@ -32,15 +36,13 @@ $ factordb --json 16
 If you want to use this script with Python, you should type `import` statement on your code like this:
 
 ```
-import factordb
-# or
-from factordb import FactorDB
+from factordb.factordb import FactorDB
 ```
 
 Then, you can get the answer with Python lists.
 
 ```
-In [1]: from factordb import FactorDB
+In [1]: from factordb.factordb import FactorDB
 
 In [2]: f = FactorDB(16)
 
