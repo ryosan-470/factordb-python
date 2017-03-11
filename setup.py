@@ -1,24 +1,25 @@
 #!/usr/bin/env python
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def _read_from_requirements():
     with open('requirements.txt') as f:
-        return [r.strip() for r in f.readlines()]
+        return f.read().splitlines()
 
 
 setup_options = dict(
     name='factordb-pycli',
-    version='0.0.1',
-    description='',
+    version='1.0.0',
+    description='The FactorDB CLI',
     long_description=open('README.md').read(),
     author='Ryosuke SATO (@ryo-san470)',
+    author_email='rskjtwp@gmail.com',
     url='https://github.com/ryo-san470/factordb-pycli',
     py_modules=['factordb'],
-    entry_points='''
-    [console_scripts]
-    factordb=cli:main
-    ''',
+    packages=find_packages(),
+    entry_points={
+        'console_scripts': 'factordb = factordb.cli:main'
+    },
     install_requires=_read_from_requirements(),
     setup_requires=['pytest-runner'],
     test_require=['pytest'],

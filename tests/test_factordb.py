@@ -2,7 +2,7 @@
 from __future__ import print_function, unicode_literals
 import unittest
 
-from factordb import FactorDB
+from factordb.factordb import FactorDB
 
 
 class FactorDBTestCase(unittest.TestCase):

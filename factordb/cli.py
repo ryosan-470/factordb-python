@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 
-from factordb import FactorDB
+from .factordb import FactorDB
 
 
 def create_parser():
