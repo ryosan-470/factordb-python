@@ -17,7 +17,7 @@ setup_options = dict(
     py_modules=['factordb'],
     entry_points='''
     [console_scripts]
-    factordb=factordb:main
+    factordb=cli:main
     ''',
     install_requires=_read_from_requirements(),
     setup_requires=['pytest-runner'],

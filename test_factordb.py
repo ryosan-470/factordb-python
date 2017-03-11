@@ -4,6 +4,7 @@ import unittest
 
 from factordb import FactorDB
 
+
 class FactorDBTestCase(unittest.TestCase):
     def test_factordb_api_1(self):
         factordb = FactorDB(1)
