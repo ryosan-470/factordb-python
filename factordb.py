@@ -35,7 +35,7 @@ class FactorDB():
 
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="The CLI for factordb.com")
     parser.add_argument("number", type=int, help="The number what you would like to factor")
     parser.add_argument("--json", help="Print all data formated by JSON", action='store_true')
     args = parser.parse_args()
