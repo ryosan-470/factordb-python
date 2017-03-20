@@ -13,3 +13,5 @@ install:
 
 script:
   - python setup.py test
+  - factordb 1
+  - factordb --json 16
