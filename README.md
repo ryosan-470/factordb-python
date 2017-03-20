@@ -1,15 +1,35 @@
 # FactorDB CLI (and Python library)
-[![Travis](https://img.shields.io/travis/ryo-san470/factordb-pycli.svg?style=flat-square)](https://travis.org/ryo-san470/factordb-pycli)
-[![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)]()
-[![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)]()
-[![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)]()
-[![PyPI](https://img.shields.io/pypi/v/factordb-pycli.svg?style=flat-square)]()
+[![Travis](https://img.shields.io/travis/ryo-san470/factordb-pycli.svg?style=flat-square)](https://travis-ci.org/ryo-san470/factordb-pycli/)
+[![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)](./LICENSE.md)
+[![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
+[![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
+[![PyPI](https://img.shields.io/pypi/v/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
 
 The [FactorDB](https://factordb.com) is the database to store known factorizations for any number.
 This tool can use on your command line. 
 And also you can use this tool with python 2 & 3 scripts.
 
-## Basic Usage
+## Installation
+The easiest way to install factordb-pycli is to use [pip](http://www.pip-installer.org/en/latest/):
+
+```bash
+$ pip install factordb-pycli
+```
+
+or, if you are not installing in a `virtualenv`:
+
+```bash
+$ sudo pip install factordb-pycli
+```
+
+If you have the factordb-pycli installed and want to upgrade to the latest version you can run:
+
+```bash
+$ pip install --upgrade factordb-pycli
+```
+
+
+## Getting Started
 
 ### CLI
 If you want to know the result of factorization of 16, you should type like this:
