@@ -22,7 +22,7 @@ setup_options = dict(
     },
     install_requires=_read_from_requirements(),
     setup_requires=['pytest-runner'],
-    test_require=['pytest'],
+    tests_require=['pytest'],
     license="MIT License",
     classifiers=(
         "Development Status :: 4 - Beta",
