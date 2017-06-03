@@ -8,6 +8,7 @@ python:
   - "nightly"
 
 install:
+  - touch README.rst
   - pip install -r requirements.txt
   - pip install codecov coverage
   - pip install -e .

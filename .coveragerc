@@ -1,0 +1,19 @@
+[run]
+branch = True
+
+[report]
+exclude_lines =
+              pragma: no cover
+
+              if __name__ == .__main__.:
+ignore_errors = True
+
+omit =
+     .venv/*
+     .eggs/*
+     *.egg-info/*
+     tests/*
+     setup.py
+
+[html]
+directory = coverage_report
