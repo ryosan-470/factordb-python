@@ -4,6 +4,7 @@
 [![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
 [![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
 [![PyPI](https://img.shields.io/pypi/v/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
+[![Codecov](https://img.shields.io/codecov/c/github/ryosan-470/factordb-pycli.svg?style=flat-square)](https://codecov.io/gh/ryosan-470/factordb-pycli)
 
 The [FactorDB](https://factordb.com) is the database to store known factorizations for any number.
 This tool can use on your command line. 
