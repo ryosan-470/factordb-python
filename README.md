@@ -67,7 +67,19 @@ In [1]: from factordb.factordb import FactorDB
 In [2]: f = FactorDB(16)
 
 In [3]: f.get_factor_list()
-Out[3]: [2, 2, 2, 2]
+Out[3]: []
+
+In [4]: f.connect()
+Out[4]: <Response [200]>
+
+In [5]: f.get_factor_list()
+Out[5]: [2, 2, 2, 2]
+
+In [6]: f.get_factor_from_api()
+Out[6]: [['2', 4]]
+
+In [7]: f.get_status()
+Out[7]: 'FF'
 ```
 
 # License

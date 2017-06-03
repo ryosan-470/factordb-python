@@ -8,6 +8,7 @@ from factordb.factordb import FactorDB
 class FactorDBTestCase(unittest.TestCase):
     def test_factordb_api_1(self):
         factordb = FactorDB(1)
+        factordb.connect()
 
         self.__check_testcase(factordb, {
             'id': -1,
@@ -17,6 +18,7 @@ class FactorDBTestCase(unittest.TestCase):
 
     def test_factordb_api_16(self):
         factordb = FactorDB(16)
+        factordb.connect()
 
         self.__check_testcase(factordb, {
             'id': '2',
@@ -34,6 +36,7 @@ class FactorDBTestCase(unittest.TestCase):
                 "2283815739666511279233373417143396810270092798736308917")
 
         factordb = FactorDB(p * q)
+        factordb.connect()
 
         self.__check_testcase(factordb, {
             'id': '1100000000193442616',

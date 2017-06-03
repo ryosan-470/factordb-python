@@ -32,6 +32,8 @@ def main():
     args = parser.parse_args()
 
     factordb = FactorDB(args.number)
+    factordb.connect()
+
     if args.json:
         out = {
             "id": "https://factordb.com/?id={}".format(factordb.get_id()),

@@ -10,22 +10,36 @@ ENDPOINT = "https://factordb.com/api"
 class FactorDB():
     def __init__(self, n):
         self.n = n
-        self.r = requests.get(ENDPOINT, params={"query": str(self.n)})
+        self.result = None
+
+    def connect(self, reconnect=False):
+        if self.result and not reconnect:
+            return self.result
+        self.result = requests.get(ENDPOINT, params={"query": str(self.n)})
+        return self.result
 
     def get_id(self):
-        return self.r.json().get("id")
+        if self.result:
+            return self.result.json().get("id")
+        return None
 
     def get_status(self):
-        return self.r.json().get("status")
+        if self.result:
+            return self.result.json().get("status")
+        return None
 
     def get_factor_from_api(self):
-        factors = self.r.json().get("factors")
-        return factors
+        if self.result:
+            return self.result.json().get("factors")
+        return None
 
     def get_factor_list(self):
         """
         get_factors: [['2', 3], ['3', 2]]
         Returns: [2, 2, 2, 3, 3]
         """
-        ml = [[int(x)] * y for x, y in self.get_factor_from_api()]
+        factors = self.get_factor_from_api()
+        if not factors:
+            return []
+        ml = [[int(x)] * y for x, y in factors]
         return [y for x in ml for y in x]
