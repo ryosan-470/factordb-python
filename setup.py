@@ -9,9 +9,9 @@ def _read_from_requirements():
 
 setup_options = dict(
     name='factordb-pycli',
-    version='1.1.0',
+    version='1.1.1',
     description='The FactorDB CLI',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author='Ryosuke SATO (@ryo-san470)',
     author_email='rskjtwp@gmail.com',
     url='https://github.com/ryo-san470/factordb-pycli',

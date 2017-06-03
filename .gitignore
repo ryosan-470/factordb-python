@@ -95,3 +95,4 @@ ENV/
 
 coverage_report/
 coverage.xml
+README.rst
