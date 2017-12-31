@@ -7,9 +7,10 @@ references:
       - run:
           name: Prepare for running tests
           command: |
-            pip install -r requirements.txt
-            pip install codecov coverage
-            pip install -e .
+            pip install --user -r requirements.txt
+            pip install --user codecov coverage
+            touch README.rst
+            pip install --user -e .
       - run:
           name: Run test
           command: |
