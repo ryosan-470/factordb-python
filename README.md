@@ -1,5 +1,5 @@
 # FactorDB CLI (and Python library)
-[![Travis](https://img.shields.io/travis/ryosan-470/factordb-pycli.svg?style=flat-square)](https://travis-ci.org/ryosan-470/factordb-pycli/)
+[![CircleCI](https://img.shields.io/circleci/project/github/ryosan-470/factordb-pycli.svg?style=flat-square)](https://circleci.com/gh/ryosan-470/factordb-pycli/)
 [![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)](./LICENSE.md)
 [![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
 [![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
