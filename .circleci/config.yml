@@ -1,0 +1,45 @@
+version: 2
+
+references:
+  test_code: &test_code
+    steps:
+      - checkout
+      - run:
+          name: Prepare for running tests
+          command: |
+            pip install -r requirements.txt
+            pip install codecov coverage
+            pip install -e .
+      - run:
+          name: Run test
+          command: |
+            python setup.py test
+            factordb 1
+            factordb --json 16
+      - run:
+          name: Run coverage
+          command: |
+            coverage run setup.py test
+      - run:
+          name: Run codecov
+          command: |
+            codecov
+
+jobs:
+  python2:
+    docker:
+      - image: circleci/python:2.7
+    <<: *test_code
+
+  python3:
+    docker:
+      - image: circleci/python:3
+    <<: *test_code
+
+
+workflows:
+  version: 2
+  test_all_python_versions:
+    jobs:
+      - python2
+      - python3
