@@ -5,6 +5,10 @@ references:
     steps:
       - checkout
       - run:
+          name: Check Python version
+          command: |
+            python -V
+      - run:
           name: Prepare for running tests
           command: |
             pip install --user -r requirements.txt
@@ -15,15 +19,18 @@ references:
           name: Run test
           command: |
             python setup.py test
+            export PATH=$HOME/.local/bin:$PATH
             factordb 1
             factordb --json 16
       - run:
           name: Run coverage
           command: |
+            export PATH=$HOME/.local/bin:$PATH
             coverage run setup.py test
       - run:
           name: Run codecov
           command: |
+            export PATH=$HOME/.local/bin:$PATH
             codecov
 
 jobs:
