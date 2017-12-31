@@ -15,7 +15,7 @@ class FactorDB():
     def connect(self, reconnect=False):
         if self.result and not reconnect:
             return self.result
-        self.result = requests.get(ENDPOINT, params={"query": str(self.n)})
+        self.result = requests.get(ENDPOINT, params={"query": str(self.n)}, verify=False)
         return self.result
 
     def get_id(self):
