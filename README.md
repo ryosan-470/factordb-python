@@ -50,7 +50,7 @@ If you want to know more detail of result, you can get an answer of JSON format.
 
 ```bash
 $ factordb --json 16
-{"id": "https://factordb.com/?id=2", "status": "FF", "factors": [2, 2, 2, 2]}
+{"id": "http://factordb.com/?id=2", "status": "FF", "factors": [2, 2, 2, 2]}
 ```
 
 ### Library usage
