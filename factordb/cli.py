@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 
-from .factordb import FactorDB
+from .factordb import FactorDB, ENDPOINT
 
 
 def create_parser():
@@ -36,7 +36,7 @@ def main():
 
     if args.json:
         out = {
-            "id": "https://factordb.com/?id={}".format(factordb.get_id()),
+            "id": "{}/?id={}".format(ENDPOINT, factordb.get_id()),
             "status": factordb.get_status(),
             "factors": factordb.get_factor_list(),
         }
