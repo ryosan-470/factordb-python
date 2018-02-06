@@ -4,7 +4,7 @@ from __future__ import print_function, unicode_literals
 import requests
 
 
-ENDPOINT = "https://factordb.com/api"
+ENDPOINT = "http://factordb.com/api"
 
 
 class FactorDB():
@@ -15,7 +15,7 @@ class FactorDB():
     def connect(self, reconnect=False):
         if self.result and not reconnect:
             return self.result
-        self.result = requests.get(ENDPOINT, params={"query": str(self.n)}, verify=False)
+        self.result = requests.get(ENDPOINT, params={"query": str(self.n)})
         return self.result
 
     def get_id(self):
