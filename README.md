@@ -1,5 +1,5 @@
-# FactorDB CLI (and Python library)
-[![CircleCI](https://img.shields.io/circleci/project/github/ryosan-470/factordb-pycli.svg?style=flat-square)](https://circleci.com/gh/ryosan-470/factordb-pycli)
+# factordb-python
+![.github/workflows/test.yml](https://github.com/ryosan-470/factordb-python/workflows/.github/workflows/test.yml/badge.svg)
 [![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)](./LICENSE.md)
 [![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
 [![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
@@ -7,7 +7,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/ryosan-470/factordb-pycli.svg?style=flat-square)](https://codecov.io/gh/ryosan-470/factordb-pycli)
 
 The [FactorDB](https://factordb.com) is the database to store known factorizations for any number.
-This tool can use on your command line. 
+This tool can use on your command line.
 And also you can use this tool with python 2 & 3 scripts.
 
 ## Installation
