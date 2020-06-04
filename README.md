@@ -1,4 +1,5 @@
 # factordb-python
+![.github/workflows/test.yml](https://github.com/ryosan-470/factordb-python/workflows/.github/workflows/test.yml/badge.svg)
 [![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)](./LICENSE.md)
 [![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
 [![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
