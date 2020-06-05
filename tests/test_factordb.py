@@ -16,6 +16,8 @@ class FactorDBTestCase(unittest.TestCase):
             'factors': []
         })
 
+        self.assertFalse(factordb.is_prime())
+
     def test_factordb_api_16(self):
         factordb = FactorDB(16)
         factordb.connect()
@@ -25,6 +27,8 @@ class FactorDBTestCase(unittest.TestCase):
             'status': 'FF',
             'factors': [2, 2, 2, 2]
         })
+
+        self.assertFalse(factordb.is_prime())
 
     def test_factordb_api_large_composite_number(self):
         """
@@ -44,6 +48,20 @@ class FactorDBTestCase(unittest.TestCase):
             'factors': [p, q]
         }
         )
+
+        self.assertFalse(factordb.is_prime())
+
+    def test_factordb_api_prime(self):
+        factordb = FactorDB(7)
+        factordb.connect()
+
+        self.__check_testcase(factordb, {
+            'id': '7',
+            'status': 'P',
+            'factors': [7]
+        })
+
+        self.assertTrue(factordb.is_prime())
 
     def __check_testcase(self, factordb, expected):
         self.assertEqual(factordb.get_id(), expected['id'])

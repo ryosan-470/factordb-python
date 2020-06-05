@@ -33,6 +33,12 @@ class FactorDB():
             return self.result.json().get("factors")
         return None
 
+    def is_prime(self, include_probably_prime=False):
+        if self.result:
+            status = self.result.json().get("status")
+            return status == 'P' or (status == 'PRP' and include_probably_prime)
+        return None
+
     def get_factor_list(self):
         """
         get_factors: [['2', 3], ['3', 2]]
