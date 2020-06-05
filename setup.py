@@ -7,14 +7,20 @@ def _read_from_requirements():
         return f.read().splitlines()
 
 
+def _load_description():
+    with open("README.md", "r") as fh:
+        return fh.read()
+
+
 setup_options = dict(
-    name='factordb-pycli',
-    version='1.2.0',
-    description='The FactorDB CLI',
-    long_description=open('README.rst').read(),
-    author='Ryosuke SATO (@ryo-san470)',
+    name='factordb-python',
+    version='1.3.0',
+    description='The FactorDB client library with Python',
+    long_description=_load_description(),
+    long_description_content_type='text/markdown',
+    author='Ryosuke SATO (@ryosan-470)',
     author_email='rskjtwp@gmail.com',
-    url='https://github.com/ryo-san470/factordb-pycli',
+    url='https://github.com/ryosan-470/factordb-python',
     py_modules=['factordb'],
     packages=find_packages(),
     entry_points={
@@ -33,6 +39,8 @@ setup_options = dict(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Topic :: Utilities",
     ),
 )

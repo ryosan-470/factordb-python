@@ -16,7 +16,6 @@ jobs:
       - name: prepare before running tests
         run: |
           pip install --user -r requirements.txt
-          touch README.rst
           pip install --user -e .
       - name: run tests
         run: python setup.py test

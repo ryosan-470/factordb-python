@@ -1,34 +1,32 @@
 # factordb-python
 ![.github/workflows/test.yml](https://github.com/ryosan-470/factordb-python/workflows/.github/workflows/test.yml/badge.svg)
-[![PyPI](https://img.shields.io/pypi/l/factordb-pycli.svg?style=flat-square)](./LICENSE.md)
-[![PyPI](https://img.shields.io/pypi/pyversions/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
-[![PyPI](https://img.shields.io/pypi/status/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
-[![PyPI](https://img.shields.io/pypi/v/factordb-pycli.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-pycli)
-[![Codecov](https://img.shields.io/codecov/c/github/ryosan-470/factordb-pycli.svg?style=flat-square)](https://codecov.io/gh/ryosan-470/factordb-pycli)
+[![PyPI](https://img.shields.io/pypi/l/factordb-python.svg?style=flat-square)](./LICENSE.md)
+[![PyPI](https://img.shields.io/pypi/pyversions/factordb-python.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-python)
+[![PyPI](https://img.shields.io/pypi/status/factordb-python.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-python)
+[![PyPI](https://img.shields.io/pypi/v/factordb-python.svg?style=flat-square)](https://pypi.python.org/pypi/factordb-python)
 
 The [FactorDB](https://factordb.com) is the database to store known factorizations for any number.
 This tool can use on your command line.
 And also you can use this tool with python 2 & 3 scripts.
 
 ## Installation
-The easiest way to install factordb-pycli is to use [pip](http://www.pip-installer.org/en/latest/):
+The easiest way to install factordb-python is to use [pip](http://www.pip-installer.org/en/latest/):
 
 ```bash
-$ pip install factordb-pycli
+$ pip install factordb-python
 ```
 
 or, if you are not installing in a `virtualenv`:
 
 ```bash
-$ sudo pip install factordb-pycli
+$ sudo pip install factordb-python
 ```
 
-If you have the factordb-pycli installed and want to upgrade to the latest version you can run:
+If you have the factordb-python installed and want to upgrade to the latest version you can run:
 
 ```bash
-$ pip install --upgrade factordb-pycli
+$ pip install --upgrade factordb-python
 ```
-
 
 ## Getting Started
 
