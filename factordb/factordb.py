@@ -49,3 +49,11 @@ class FactorDB():
             return []
         ml = [[int(x)] * y for x, y in factors]
         return [y for x in ml for y in x]
+
+    @staticmethod
+    def submit_factors(product, factors):
+        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+
+        factors = map(str, factors)
+        data = {"report": f"{product}={','.join(factors)}"}
+        requests.post("http://factordb.com/report.php", headers=headers, data=data)
