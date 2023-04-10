@@ -3,6 +3,7 @@ from __future__ import print_function, unicode_literals
 import unittest
 
 from factordb.factordb import FactorDB
+from Crypto.Util import number
 
 
 class FactorDBTestCase(unittest.TestCase):
@@ -62,6 +63,25 @@ class FactorDBTestCase(unittest.TestCase):
         })
 
         self.assertTrue(factordb.is_prime())
+
+    def test_submit(self):
+        # generate not yet factorized numbers
+        factordb = None
+        while factordb is None or factordb.get_status() != 'C':
+            p = number.getPrime(1024)
+            q = number.getPrime(1024)
+            n = p * q
+
+            factordb = FactorDB(n)
+            factordb.connect()
+
+        # sort numbers because factordb returns them in ascending order
+        factors = sorted([p, q])
+        FactorDB.submit_factors(n, factors)
+
+        factordb.connect(reconnect=True)
+        self.assertEqual(factordb.get_status(), 'FF')
+        self.assertListEqual(factordb.get_factor_list(), factors)
 
     def __check_testcase(self, factordb, expected):
         self.assertEqual(factordb.get_id(), expected['id'])
